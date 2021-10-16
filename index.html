@@ -26,6 +26,14 @@
     <!-- load styles -->
     <link rel="stylesheet" href="fonts/fontstyle.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- load favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#317dc6">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <main>
@@ -43,7 +51,7 @@
             </div>
             <div class="header-img">
               <!-- NOTE: add responsive set of images here -->
-              <img src="images/stevenwolpe_portrait.png" alt="Illustrated self-portrait of Steven Wolpe.">
+              <img src="images/stevenwolpe_portrait.png" width="1" height="1" alt="Illustrated self-portrait of Steven Wolpe.">
             </div>
           </div>
         </div>
@@ -57,26 +65,26 @@
           <p>Check out some of my web development projects below.</p>
           <section class="project-item">
             <div class="project-img">
-              <img src="images/crittool.jpg" alt="Screenshot showing user interface of a critique tool.">
+              <img src="images/crittool.jpg" width="5" height="4" alt="Screenshot showing user interface of a critique tool.">
             </div>
             <div class="project-summary">
               <h3>Crittool</h3>
               <p>Crittool is a web app that facilitates standardized online critiques for artists and designers. The UI/UX is crafted to encourage objective feedback by structuring the critique process around the fundamentals of art and design.</p>
               <p>The project makes use of asynchronous javascript, cloud-hosted databases, image analysis via RESTful API, and server-side coding in the Node.js environment.</p>
               <p><span>Utilizes:</span> JavaScript, HTML5/CSS3, VueJS, Ajax, Cloud Vision API, Firebase: Authorization, Cloud Functions, Cloud Firestore (NoSQL), Cloud Storage, Cloud Hosting</p>
-              <a class="btn" href="https://crittool.com" target="_blank">View project</a>
+              <a class="btn" href="https://crittool.com" rel="noreferrer noopener" target="_blank">View project</a>
             </div>
           </section>
           <section class="project-item">
             <div class="project-img">
-              <img src="images/readyornot.jpg" alt="Screenshot showing home page of a project website. ">
+              <img src="images/readyornot.jpg" width="5" height="4" alt="Screenshot showing home page of a project website. ">
             </div>
             <div class="project-summary">
               <h3>Ready or Not</h3>
               <p>Ready or Not is a project that explores the commonality of our fears. Through color, motion, and typography, the site creates a calming atmosphere. This atmosphere encourages more honest interaction.</p>
               <p>I developed this site to learn more about MySQL databases and experiment with color and motion. </p>
               <p><span>Utilizes:</span> JavaScript, HTML5/CSS3, MySQL</p>
-              <a class="btn" href="http://readyornot.life/" target="_blank">View project</a>
+              <a class="btn" href="http://readyornot.life/" rel="noreferrer noopener" target="_blank">View project</a>
             </div>
           </section>
         </div>
@@ -87,7 +95,7 @@
       <section class="work-exp">
         <div class="content-wrap divider">
           <h2>Work Experience</h2>
-          <p>Learn more about my experience, education, and skills on <a href="https://www.linkedin.com/in/stevenwolpe/" target="_blank">LinkedIn</a>.</p>
+          <p>Learn more about my experience, education, and skills on <a href="https://www.linkedin.com/in/stevenwolpe/" rel="noreferrer noopener" target="_blank">LinkedIn</a>.</p>
           <section class="job-item">
             <div class="job-details">
               <h3>Front-end Developer</h3>
@@ -147,7 +155,8 @@
               <li><h3>Phone</h3> <a href="tel:+1-805-798-0637">805-798-0637</a></li>
             </ul>
             <div class="links">
-              <a href="https://www.linkedin.com/in/stevenwolpe/" target="_blank">
+              <a href="https://www.linkedin.com/in/stevenwolpe/" rel="noreferrer noopener" target="_blank">
+                LinkedIn
                 <!-- linkedin logo -->
                 <svg version="1.1" class="" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
                   <g>
@@ -164,7 +173,8 @@
                   </g>
                 </svg>
               </a>
-              <a href="https://www.medium.com/@sewolpe/" target="_blank">
+              <a href="https://www.medium.com/@sewolpe/" rel="noreferrer noopener" target="_blank">
+                Medium
                 <!-- medium logo -->
                 <svg version="1.1" class=""
                 xmlns="http://www.w3.org/2000/svg" width="54" height="42" viewBox="0 0 60 48">
@@ -177,13 +187,15 @@
                   </g>
                 </svg>
               </a>
-              <a href="https://www.github.com/swolpe/" target="_blank">
+              <a href="https://www.github.com/swolpe/" rel="noreferrer noopener" target="_blank">
+                GitHub
                 <!-- github logo -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24">
                   <path fill="#E1EAFA" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
               </a>
-              <a href="https://www.dribbble.com/swolpe/" target="_blank">
+              <a href="https://www.dribbble.com/swolpe/" rel="noreferrer noopener" target="_blank">
+                Dribbble
                 <!-- dribbble logo -->
                 <svg version="1.1" class="" 
                 xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 48 48" >

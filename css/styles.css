@@ -27,6 +27,7 @@ body {
 a {
   color: rgba(39,103,187,1);
   text-decoration: none;
+  font-weight: 600;
 }
 a:hover {
   text-decoration: underline;
@@ -123,6 +124,11 @@ header .header-container {
   align-items: center;
   grid-gap: 1rem;
 }
+header img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
 
 /* Projects
 ----------------------------- */
@@ -160,13 +166,8 @@ header .header-container {
   margin: 0 auto;
   max-width: 350px;
   width: 100%;
+  height: auto;
   border-radius: .25rem;
-  /* float: left; */
-  /* margin-right */
-  
-  
-  
-  /* margin-right: 20px; */
 }
 .project-item h3 {
   margin-top: 0;
@@ -188,9 +189,9 @@ header .header-container {
   background: #ACB0BD;
   background: rgba(54,54,53,.3);
 }
-/* .work-exp h2 {
+.work-exp h2 {
   color: rgba(39,103,187,1);
-} */
+}
 .job-item {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -271,12 +272,16 @@ footer h3 {
 }
 footer a {
   color: #F7FFF7;
+  font-weight: 400;
   /* text-decoration: none; */
 }
 footer .links a {
   display: inline-block;
   line-height: 0;
   margin-right: 1rem;
+  line-height: 0; 
+  font-size: 0;
+  color: transparent; 
 }
 footer .links a:last-of-type {
   margin-right: 0;
