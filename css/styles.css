@@ -27,7 +27,7 @@ body {
 a {
   color: rgba(39,103,187,1);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
 }
 a:hover {
   text-decoration: underline;
@@ -81,7 +81,7 @@ a.btn{
   box-sizing: border-box;
   text-decoration:none;
   /* font-family:'Roboto',sans-serif; */
-  /* font-weight:300; */
+  font-weight:600;
   color:rgba(39,103,187,1);;
   text-align:center;
   transition: all 0.2s;
