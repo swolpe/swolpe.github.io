@@ -1,12 +1,3 @@
-/* Color Palette
-#D9DBF1 - Lavender Web
-#D0CDD7 - Lavender Gray
-#ACB0BD - Cadet Blue Crayola
-#416165 - Deep Space Sparkle
-#0B3948 - Midnight Green Eagle Green
-#F6AE2D - yeller gold
-*/
-
 /* Global
 ----------------------------- */
 html {
@@ -69,7 +60,6 @@ h3 {
 i {
   font-family: 'RaIt';
 }
-
 /* Button
 ----------------------------- */
 a.btn{
@@ -80,7 +70,6 @@ a.btn{
   border-radius:0.12em;
   box-sizing: border-box;
   text-decoration:none;
-  /* font-family:'Roboto',sans-serif; */
   font-weight:600;
   color:rgba(39,103,187,1);;
   text-align:center;
@@ -96,7 +85,6 @@ a.btn:hover{
     margin:0.4em auto 0;
   }
 }
-
 /* Profile
 ----------------------------- */
 header {
@@ -118,22 +106,20 @@ header p {
 header p:first-of-type {
   margin-bottom: 1rem;
 }
+header img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
 header .header-container {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
   grid-gap: 1rem;
 }
-header img {
-  max-width: 200px;
-  width: 100%;
-  height: auto;
-}
-
 /* Projects
 ----------------------------- */
 .projects {
-  /* background: #D9DBF1; */
   background-image: radial-gradient( circle farthest-corner at 18.7% 37.8%,  rgba(250,250,250,1) 0%, rgba(225,234,238,1) 90% );
 }
 .projects h2 {
@@ -142,19 +128,7 @@ header img {
 .projects p:first-of-type {
   margin-bottom: 0;
 }
-/* .projects .btn {
-  color: #F7FFF7;
-  background: rgba(16,72,144,1);
-  text-decoration: none;
-  padding: .5rem;
-  border-radius: .25rem;
-  display: inline-block;
-}
-.projects .btn:hover {
-  background: rgba(11,57,72,.8);
-} */
 .project-item {
-  /* overflow: hidden; */
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 1.25rem;
@@ -172,17 +146,14 @@ header img {
 .project-item h3 {
   margin-top: 0;
 }
-
 .project-item p:last-of-type {
   font-weight: 600;
   color: rgba(52,52,52,.75);
 }
-
 .project-item p:last-of-type span {
   font-weight: 800;
   color: rgba(52,52,52,.85);
 }
-
 /* Work Experience
 ----------------------------- */
 .work-exp {
@@ -211,16 +182,10 @@ header img {
   margin-bottom: 0;
   line-height: 2;
 }
-/* .job-summary li {
-  margin-bottom: 1rem;
-} */
 /* Education
 ----------------------------- */
 .education {
-  /* background-image: url(../images/santa-barbara-jake-grella-unsplash.jpg);
-  background-size: auto;
-  background-position: left; */
-  background: rgba(11,57,72,.8);/* #F4B942;*/
+  background: #F7FFF7;
   background-image: radial-gradient( circle farthest-corner at 18.7% 37.8%,  rgba(250,250,250,1) 0%, rgba(225,234,238,1) 90% );
 }
 .education section {
@@ -243,7 +208,6 @@ header img {
 .education p span {
   font-variant: all-small-caps;
 }
-
 /* Footer
 ----------------------------- */
 footer {
@@ -273,7 +237,6 @@ footer h3 {
 footer a {
   color: #F7FFF7;
   font-weight: 400;
-  /* text-decoration: none; */
 }
 footer .links a {
   display: inline-block;
@@ -290,36 +253,25 @@ footer .links {
   text-align: end;
 }
 footer .links svg {
-  /* margin-right: 1rem; */
   transition: all .25s;
   transform-origin: 50% 50%;
 }
 footer .links svg:hover {
   transform: scale(1.2);
 }
-/* footer .links svg:last-of-type {
-  margin-right: 0;
-} */
-
 /* Responsive Layout
 ----------------------------- */
-
 @media screen and (max-width: 1000px) {
   .project-item {
     grid-template-columns: 1.25fr 1.75fr;
   }
 }
-
 @media screen and (max-width: 900px) {
   .project-item {
     grid-template-columns: 1.5fr 1.5fr;
     padding: 1.5rem 0;
   }
-  /* footer .container {
-    grid-template-columns: 1fr 1fr;
-  } */
 }
-
 @media screen and (max-width: 700px) {
   header .header-container {
     grid-template-columns: 1fr;
@@ -345,10 +297,6 @@ footer .links svg:hover {
   .project-item img {
     margin-bottom: 1rem;
   }
-  /* .project-item .btn {
-    width: 100%;
-    text-align: center;
-  } */
   .job-item {
     grid-template-columns: 1fr;
   }
@@ -368,7 +316,6 @@ footer .links svg:hover {
     margin-right: 0;
   }
 }
-
 @media screen and (max-width: 500px) {
   .content-wrap {
     width: 90%;
