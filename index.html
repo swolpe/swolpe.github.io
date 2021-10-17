@@ -50,15 +50,34 @@
               <p>I think the modern web is incredible, but it has way more potential. Let's make it as fun and helpful as possible!</p>
             </div>
             <div class="header-img">
-              <!-- NOTE: add responsive set of images here -->
-              <img src="images/stevenwolpe_portrait-100.png"
-                alt="Illustrated self-portrait of Steven Wolpe."
-                width="96" height="96"
-                srcset="images/stevenwolpe_portrait-100.png 100w,
-                        images/stevenwolpe_portrait-200.png 200w"
-                sizes="(max-width: 320px) 100px,
-                      200px" 
-              >
+              <picture>
+                <!-- small mobile displays, 320px wide or less-->
+                <source media="(max-width: 320px)" srcset="images/stevenwolpe_portrait-100.webp" type="image/webp">
+                <!-- any display, 321 px wide or more -->
+                <source media="(min-width: 321px)" srcset="images/stevenwolpe_portrait-200.webp" type="image/webp">
+                <!-- high density image -->
+                <source media="(-webkit-min-device-pixel-ratio: 1.25), 
+                               ( min--moz-device-pixel-ratio: 1.25),
+                               ( min-device-pixel-ratio: 1.25),
+                               ( min-resolution: 200dpi),
+                               ( min-resolution: 1.25dppx)"
+                        srcset="images/stevenwolpe_portrait-400.webp 2x" type="image/webp">
+                <!-- fallback for IE and older browsers -->
+                <img src="images/stevenwolpe_portrait-100.png"
+                  alt="Illustrated self-portrait of Steven Wolpe."
+                  width="96" height="96"
+                  srcset="images/stevenwolpe_portrait-100.png 100w,
+                          images/stevenwolpe_portrait-200.png 200w,
+                          images/stevenwolpe_portrait-400.png 400w"
+                  sizes="(max-width: 320px) 100px,
+                         (-webkit-min-device-pixel-ratio: 1.25) 400px, 
+                         ( min--moz-device-pixel-ratio: 1.25) 400px,
+                         ( min-device-pixel-ratio: 1.25) 400px,
+                         ( min-resolution: 200dpi) 400px,
+                         ( min-resolution: 1.25dppx) 400px,
+                         200px" 
+                >
+              </picture>
             </div>
           </div>
         </div>
@@ -78,7 +97,12 @@
                   <!-- any display, 321 px wide or more -->
                   <source media="(min-width: 321px)" srcset="images/crittool-350.webp" type="image/webp">
                   <!-- high density image -->
-                  <source srcset="images/crittool-700.webp 2x" type="image/webp">
+                  <source media="(-webkit-min-device-pixel-ratio: 1.25), 
+                                 ( min--moz-device-pixel-ratio: 1.25),
+                                 ( min-device-pixel-ratio: 1.25),
+                                 ( min-resolution: 200dpi),
+                                 ( min-resolution: 1.25dppx)" 
+                          srcset="images/crittool-700.webp 2x" type="image/webp">
                   <!-- fallback for IE and older browsers -->
                   <img src="images/crittool-320.jpg"
                     alt="Screenshot showing user interface of a critique tool."
@@ -87,7 +111,12 @@
                             images/crittool-350.jpg 350w,
                             images/crittool-700.jpg 700w"
                     sizes="(max-width: 320px) 320px,
-                          350px"
+                           (-webkit-min-device-pixel-ratio: 1.25) 700px, 
+                           ( min--moz-device-pixel-ratio: 1.25) 700px,
+                           ( min-device-pixel-ratio: 1.25) 700px,
+                           ( min-resolution: 200dpi) 700px,
+                           ( min-resolution: 1.25dppx) 700px,
+                           350px"
                   >
               </picture>
             </div>
@@ -107,16 +136,26 @@
                 <!-- any display, 321 px wide or more -->
                 <source media="(min-width: 321px)" srcset="images/readyornot-350.webp" type="image/webp">
                 <!-- high density image -->
-                <source srcset="images/readyornot-700.webp 2x" type="image/webp">
+                <source media="(-webkit-min-device-pixel-ratio: 1.25), 
+                               ( min--moz-device-pixel-ratio: 1.25),
+                               ( min-device-pixel-ratio: 1.25),
+                               ( min-resolution: 200dpi),
+                               ( min-resolution: 1.25dppx)"
+                        srcset="images/readyornot-700.webp 2x" type="image/webp">
                 <!-- fallback for IE and older browsers -->
                 <img src="images/readyornot-320.jpg"
-                  alt="Screenshot showing user interface of a critique tool."
+                  alt="Screenshot showing a website user interface."
                   width="5" height="4" 
                   srcset="images/readyornot-320.jpg 320w,
                           images/readyornot-350.jpg 350w,
                           images/readyornot-700.jpg 700w"
                   sizes="(max-width: 320px) 320px,
-                        350px"
+                         (-webkit-min-device-pixel-ratio: 1.25) 700px, 
+                         ( min--moz-device-pixel-ratio: 1.25) 700px,
+                         ( min-device-pixel-ratio: 1.25) 700px,
+                         ( min-resolution: 200dpi) 700px,
+                         ( min-resolution: 1.25dppx) 700px,
+                         350px"
                 >
             </picture>
             </div>
