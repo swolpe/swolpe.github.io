@@ -51,7 +51,14 @@
             </div>
             <div class="header-img">
               <!-- NOTE: add responsive set of images here -->
-              <img src="images/stevenwolpe_portrait.png" width="1" height="1" alt="Illustrated self-portrait of Steven Wolpe.">
+              <img src="images/stevenwolpe_portrait-100.png"
+                alt="Illustrated self-portrait of Steven Wolpe."
+                width="96" height="96"
+                srcset="images/stevenwolpe_portrait-100.png 100w,
+                        images/stevenwolpe_portrait-200.png 200w"
+                sizes="(max-width: 320px) 100px,
+                      200px" 
+              >
             </div>
           </div>
         </div>
@@ -65,7 +72,24 @@
           <p>Check out some of my web development projects below.</p>
           <section class="project-item">
             <div class="project-img">
-              <img src="images/crittool.jpg" width="5" height="4" alt="Screenshot showing user interface of a critique tool.">
+              <picture>
+                  <!-- small mobile displays, 320px wide or less-->
+                  <source media="(max-width: 320px)" srcset="images/crittool-320.webp" type="image/webp">
+                  <!-- any display, 321 px wide or more -->
+                  <source media="(min-width: 321px)" srcset="images/crittool-350.webp" type="image/webp">
+                  <!-- high density image -->
+                  <source srcset="images/crittool-700.webp 2x" type="image/webp">
+                  <!-- fallback for IE and older browsers -->
+                  <img src="images/crittool-320.jpg"
+                    alt="Screenshot showing user interface of a critique tool."
+                    width="5" height="4" 
+                    srcset="images/crittool-320.jpg 320w,
+                            images/crittool-350.jpg 350w,
+                            images/crittool-700.jpg 700w"
+                    sizes="(max-width: 320px) 320px,
+                          350px"
+                  >
+              </picture>
             </div>
             <div class="project-summary">
               <h3>Crittool</h3>
@@ -77,7 +101,24 @@
           </section>
           <section class="project-item">
             <div class="project-img">
-              <img src="images/readyornot.jpg" width="5" height="4" alt="Screenshot showing home page of a project website. ">
+              <picture>
+                <!-- small mobile displays, 320px wide or less-->
+                <source media="(max-width: 320px)" srcset="images/readyornot-320.webp" type="image/webp">
+                <!-- any display, 321 px wide or more -->
+                <source media="(min-width: 321px)" srcset="images/readyornot-350.webp" type="image/webp">
+                <!-- high density image -->
+                <source srcset="images/readyornot-700.webp 2x" type="image/webp">
+                <!-- fallback for IE and older browsers -->
+                <img src="images/readyornot-320.jpg"
+                  alt="Screenshot showing user interface of a critique tool."
+                  width="5" height="4" 
+                  srcset="images/readyornot-320.jpg 320w,
+                          images/readyornot-350.jpg 350w,
+                          images/readyornot-700.jpg 700w"
+                  sizes="(max-width: 320px) 320px,
+                        350px"
+                >
+            </picture>
             </div>
             <div class="project-summary">
               <h3>Ready or Not</h3>
