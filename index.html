@@ -139,6 +139,45 @@
                                ( min-device-pixel-ratio: 1.25),
                                ( min-resolution: 200dpi),
                                ( min-resolution: 1.25dppx)"
+                        srcset="images/bladersfieldguide-700.webp" type="image/webp">
+                <!-- any display, 321 px wide or more -->
+                <source media="(min-width: 321px)" srcset="images/bladersfieldguide-350.webp" type="image/webp">
+                <!-- small mobile displays, 320px wide or less-->
+                <source media="(max-width: 320px)" srcset="images/bladersfieldguide-320.webp" type="image/webp">
+                <!-- fallback for IE and older browsers -->
+                <img src="images/readyornot-320.jpg"
+                  alt="Screenshot of the Bladers Field Guide showing a Royale grind on a ledge."
+                  width="5" height="4" 
+                  srcset="images/bladersfieldguide-320.jpg 320w,
+                          images/bladersfieldguide-350.jpg 350w,
+                          images/bladersfieldguide-700.jpg 700w"
+                  sizes="(max-width: 320px) 320px,
+                         (-webkit-min-device-pixel-ratio: 1.25) 700px, 
+                         ( min--moz-device-pixel-ratio: 1.25) 700px,
+                         ( min-device-pixel-ratio: 1.25) 700px,
+                         ( min-resolution: 200dpi) 700px,
+                         ( min-resolution: 1.25dppx) 700px,
+                         350px"
+                >
+            </picture>
+            </div>
+            <div class="project-summary">
+              <h3>Bladers Field Guide</h3>
+              <p>Bladers Field Guide is a responsive web app built with React. It displays information for inline skating tricks, including photos and descriptions. It features a clean UI/UX that lets users look through different tricks on any device.</p>
+              <p>I developed this project because I love to skate and want to share it! The sport needs more young people with an understanding of the trick vocabulary. This app provides a quick way to learn about different tricks.</p>
+              <p><span>Utilizes:</span> JavaScript, HTML5/CSS3, React</p>
+              <a class="btn" href="https://bladersfieldguide.com/" rel="noreferrer noopener" target="_blank">View project</a>
+            </div>
+          </section>
+          <section class="project-item">
+            <div class="project-img">
+              <picture>
+                <!-- high density image -->
+                <source media="(-webkit-min-device-pixel-ratio: 1.25), 
+                               ( min--moz-device-pixel-ratio: 1.25),
+                               ( min-device-pixel-ratio: 1.25),
+                               ( min-resolution: 200dpi),
+                               ( min-resolution: 1.25dppx)"
                         srcset="images/readyornot-700.webp" type="image/webp">
                 <!-- any display, 321 px wide or more -->
                 <source media="(min-width: 321px)" srcset="images/readyornot-350.webp" type="image/webp">
