@@ -1,26 +1,15 @@
 @font-face {
-    font-family: "AlNo";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(AlbertusNova.ttf) format("woff2");
+	font-family: "Rale";
+	font-style: normal;
+	font-weight: 100 700;
+	font-display: swap;
+	src: url(Raleway-VariableFont_wght.ttf) format("woff2");
 }
 
 @font-face {
-    font-family: "Rale";
-    font-style: normal;
-    font-weight: 100 700;
-    font-display: swap;
-    src: url(Raleway-VariableFont_wght.ttf) format("woff2");
+	font-family: "RaIt";
+	font-style: normal;
+	font-weight: 100 700;
+	font-display: swap;
+	src: url(Raleway-Italic-VariableFont_wght.ttf) format("woff2");
 }
-
-@font-face {
-    font-family: "RaIt";
-    font-style: normal;
-    font-weight: 100 700;
-    font-display: swap;
-    src: url(Raleway-Italic-VariableFont_wght.ttf) format("woff2");
-}
-
-
-
