@@ -5,30 +5,28 @@
     <meta name="description" content="Steven Wolpe is a multidisciplinary front-end developer who loves creating semantic, meaningful code with HTML, CSS, and JavaScript. ">
     <meta name="author" content="Steven Wolpe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Wolpe, Front-End Developer, Ojai, CA</title>
+    <title>Steven Wolpe, Front End Developer, Ojai, CA</title>
     <!-- preload fonts -->
-    <link 
-      rel="preload"
-      href="fonts/AlbertusNova.ttf"
-      as="font"
-      type="font/woff2"
-    />
     <link 
       rel="preload"
       href="fonts/Raleway-VariableFont_wght.ttf"
       as="font"
       type="font/woff2"
+      crossOrigin
     />
     <link 
       rel="preload"
       href="fonts/Raleway-Italic-VariableFont_wght.ttf"
       as="font"
       type="font/woff2"
+      crossOrigin
     />
     <!-- load styles -->
     <link rel="stylesheet" href="fonts/fontstyle.css">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- load favicon -->
+    <!-- load styles for animate on scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- load favicon, etc -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,48 +38,23 @@
   <body>
     <main>
 
-      <!-- header/about section -->
+      <!-- header/intro section -->
 
-      <header>
+      <header data-aos="fade-down">
         <div class="content-wrap">
           <div class="header-container">
             <div class="header-summary">
-              <h1>Steven Wolpe</h1>
-              <h2>Front End Developer</h2>
-              <p>I'm a multidisciplinary front end developer who loves creating semantic, meaningful code with HTML, CSS, and JavaScript.</p>
-              <p>I think the modern web is incredible, but it has way more potential. Let's make it funner and more helpful!</p>
+              <h1>Howdy! I'm Steven.</h1>
+              <p>A multidisciplinary <span class="red-text">developer</span> and <span class="red-text">designer</span>  who loves creating meaningful user experiences with HTML, CSS, and JavaScript.</p>
+              <p>The modern web is incredible, but it has way more potential!</p>
             </div>
-            <div class="header-img">
-              <picture>
-                <!-- high density image -->
-                <source media="(-webkit-min-device-pixel-ratio: 1.25), 
-                               ( min--moz-device-pixel-ratio: 1.25),
-                               ( min-device-pixel-ratio: 1.25),
-                               ( min-resolution: 200dpi),
-                               ( min-resolution: 1.25dppx)"
-                        srcset="images/stevenwolpe_portrait-400.webp" type="image/webp">
-                <!-- any display, 321 px wide or more -->
-                <source media="(min-width: 321px)" srcset="images/stevenwolpe_portrait-200.webp" type="image/webp">
-                <!-- small mobile displays, 320px wide or less-->
-                <source media="(max-width: 320px)" srcset="images/stevenwolpe_portrait-100.webp" type="image/webp">
-                <!-- fallback for IE and older browsers -->
-                <img src="images/stevenwolpe_portrait-100.png"
-                  alt="Illustrated self-portrait of Steven Wolpe."
-                  width="96" height="96"
-                  srcset="images/stevenwolpe_portrait-100.png 100w,
-                          images/stevenwolpe_portrait-200.png 200w,
-                          images/stevenwolpe_portrait-400.png 400w"
-                  sizes="(max-width: 320px) 100px,
-                         (-webkit-min-device-pixel-ratio: 1.25) 400px, 
-                         ( min--moz-device-pixel-ratio: 1.25) 400px,
-                         ( min-device-pixel-ratio: 1.25) 400px,
-                         ( min-resolution: 200dpi) 400px,
-                         ( min-resolution: 1.25dppx) 400px,
-                         200px" 
-                >
-              </picture>
-            </div>
+            <div class="header-img"></div>
           </div>
+        </div>
+        <div class="scroll-down-indicator">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.86 66.57" onclick="goToProjects()" onmouseover="toggleImage()" onmouseout="toggleImage()">
+            <title>View projects</title><g id="down-arrow" data-name="down-arrow"><path class="down-arrow-path" d="M101.93,2.93a10,10,0,0,1,0,14.14L66.57,52.43,52.43,66.57,38.29,52.43,2.93,17.07a10,10,0,0,1,0-14.14h0a10,10,0,0,1,14.14,0L52.43,38.29,87.79,2.93a10,10,0,0,1,14.14,0Z"/></g>
+          </svg>
         </div>
       </header>
 
@@ -89,11 +62,19 @@
 
       <section class="projects">
         <div class="content-wrap divider">
-          <h2>Featured Projects</h2>
-          <p>Check out some of my web development projects below.</p>
+
+          <div class="projects-header">
+            <div class="header-text">
+              <h2>Featured Projects</h2>
+              <p>Let's make the world a better place by making the web more helpful!</p>
+            </div>
+          </div>
+          
           <section class="project-item">
-            <div class="project-img">
-              <picture>
+            <div class="project-img" data-aos="fade-right">
+              <video autoplay loop muted playsinline>
+                <source src="videos/crittool.mp4" type="video/mp4">
+                <picture>
                   <!-- high density image -->
                   <source media="(-webkit-min-device-pixel-ratio: 1.25), 
                                  ( min--moz-device-pixel-ratio: 1.25),
@@ -119,95 +100,106 @@
                            ( min-resolution: 200dpi) 700px,
                            ( min-resolution: 1.25dppx) 700px,
                            350px"
-                  >
-              </picture>
+                    >
+                </picture>
+              </video>
             </div>
-            <div class="project-summary">
+            <div class="project-summary" data-aos="fade-right">
               <h3>Crittool</h3>
-              <p>Crittool is a CRUD web app that facilitates standardized online critiques for artists and designers. The UI/UX is crafted to encourage objective feedback by structuring the critique process around the fundamentals of art and design.</p>
-              <p>The project makes use of asynchronous javascript, cloud-hosted databases, image analysis via RESTful API, and server-side coding in the Node.js environment.</p>
-              <p><span>Utilizes:</span> JavaScript, HTML5/CSS3, VueJS, Ajax, Cloud Vision API, Firebase: Authorization, Cloud Functions, Cloud Firestore (NoSQL), Cloud Storage, Cloud Hosting</p>
-              <a class="btn" href="https://crittool.com" rel="noreferrer noopener" target="_blank">View project</a>
+              <p>A CRUD web app that facilitates standardized online critiques for artists and designers. The user experience is crafted to encourage objective feedback by structuring the critique process around the fundamentals of art and design.</p>
+              <p>The project features asynchronous javascript, cloud-hosted databases, image analysis via RESTful API, and server-side coding in the Node.js environment.</p>
+              <p><span>Toolkit:</span> Vue, Cloud Vision API, Firebase, Cloud Functions, Cloud Firestore (NoSQL), Cloud Storage</p>
+              <a class="btn" href="https://crittool.com" rel="noreferrer noopener" target="_blank">View Live</a>
             </div>
           </section>
+
           <section class="project-item">
-            <div class="project-img">
-              <picture>
-                <!-- high density image -->
-                <source media="(-webkit-min-device-pixel-ratio: 1.25), 
-                               ( min--moz-device-pixel-ratio: 1.25),
-                               ( min-device-pixel-ratio: 1.25),
-                               ( min-resolution: 200dpi),
-                               ( min-resolution: 1.25dppx)"
-                        srcset="images/bladersfieldguide-700.webp" type="image/webp">
-                <!-- any display, 321 px wide or more -->
-                <source media="(min-width: 321px)" srcset="images/bladersfieldguide-350.webp" type="image/webp">
-                <!-- small mobile displays, 320px wide or less-->
-                <source media="(max-width: 320px)" srcset="images/bladersfieldguide-320.webp" type="image/webp">
-                <!-- fallback for IE and older browsers -->
-                <img src="images/readyornot-320.jpg"
-                  alt="Screenshot of the Bladers Field Guide showing a Royale grind on a ledge."
-                  width="5" height="4" 
-                  srcset="images/bladersfieldguide-320.jpg 320w,
-                          images/bladersfieldguide-350.jpg 350w,
-                          images/bladersfieldguide-700.jpg 700w"
-                  sizes="(max-width: 320px) 320px,
-                         (-webkit-min-device-pixel-ratio: 1.25) 700px, 
-                         ( min--moz-device-pixel-ratio: 1.25) 700px,
-                         ( min-device-pixel-ratio: 1.25) 700px,
-                         ( min-resolution: 200dpi) 700px,
-                         ( min-resolution: 1.25dppx) 700px,
-                         350px"
-                >
-            </picture>
+            <div class="project-img" data-aos="fade-right">
+              <video autoplay loop muted playsinline>
+                <source src="videos/bladersfieldguide.mp4" type="video/mp4">
+                <picture>
+                  <!-- high density image -->
+                  <source media="(-webkit-min-device-pixel-ratio: 1.25), 
+                                 ( min--moz-device-pixel-ratio: 1.25),
+                                 ( min-device-pixel-ratio: 1.25),
+                                 ( min-resolution: 200dpi),
+                                 ( min-resolution: 1.25dppx)"
+                          srcset="images/bladersfieldguide-700.webp" type="image/webp">
+                  <!-- any display, 321 px wide or more -->
+                  <source media="(min-width: 321px)" srcset="images/bladersfieldguide-350.webp" type="image/webp">
+                  <!-- small mobile displays, 320px wide or less-->
+                  <source media="(max-width: 320px)" srcset="images/bladersfieldguide-320.webp" type="image/webp">
+                  <!-- fallback for IE and older browsers -->
+                  <img src="images/bladersfieldguide-320.jpg"
+                    alt="Screenshot of the Bladers Field Guide showing a Royale grind on a ledge."
+                    width="5" height="4" 
+                    srcset="images/bladersfieldguide-320.jpg 320w,
+                            images/bladersfieldguide-350.jpg 350w,
+                            images/bladersfieldguide-700.jpg 700w"
+                    sizes="(max-width: 320px) 320px,
+                           (-webkit-min-device-pixel-ratio: 1.25) 700px, 
+                           ( min--moz-device-pixel-ratio: 1.25) 700px,
+                           ( min-device-pixel-ratio: 1.25) 700px,
+                           ( min-resolution: 200dpi) 700px,
+                           ( min-resolution: 1.25dppx) 700px,
+                           350px"
+                    >
+                </picture>
+              </video>
             </div>
-            <div class="project-summary">
+            <div class="project-summary" data-aos="fade-right">
               <h3>Bladers Field Guide</h3>
-              <p>Bladers Field Guide is a responsive web app built with React. It displays information for inline skating tricks, including photos and descriptions. It features a clean UI/UX that lets users look through different tricks on any device.</p>
+              <p>A responsive web app built with React. It displays information for inline skating tricks, including photos, descriptions, and more. It features a clean interface that lets users look through different tricks on any device.</p>
               <p>I developed this project because I love to skate and want to share it! The sport needs more young people with an understanding of the trick vocabulary. This app provides a quick way to learn about different tricks.</p>
-              <p><span>Utilizes:</span> JavaScript, HTML5/CSS3, React, GitHub</p>
-              <a class="btn" href="https://bladersfieldguide.com/" rel="noreferrer noopener" target="_blank">View project</a>
+              <p><span>Toolkit:</span> React, HTML5/CSS3</p>
+              <a class="btn" href="https://bladersfieldguide.com/" rel="noreferrer noopener" target="_blank">View Live</a>
+              <a class="btn" href="https://github.com/swolpe/bfg/" rel="noreferrer noopener" target="_blank">GitHub</a>
             </div>
           </section>
+
           <section class="project-item">
-            <div class="project-img">
-              <picture>
-                <!-- high density image -->
-                <source media="(-webkit-min-device-pixel-ratio: 1.25), 
-                               ( min--moz-device-pixel-ratio: 1.25),
-                               ( min-device-pixel-ratio: 1.25),
-                               ( min-resolution: 200dpi),
-                               ( min-resolution: 1.25dppx)"
-                        srcset="images/readyornot-700.webp" type="image/webp">
-                <!-- any display, 321 px wide or more -->
-                <source media="(min-width: 321px)" srcset="images/readyornot-350.webp" type="image/webp">
-                <!-- small mobile displays, 320px wide or less-->
-                <source media="(max-width: 320px)" srcset="images/readyornot-320.webp" type="image/webp">
-                <!-- fallback for IE and older browsers -->
-                <img src="images/readyornot-320.jpg"
-                  alt="Screenshot showing a website user interface."
-                  width="5" height="4" 
-                  srcset="images/readyornot-320.jpg 320w,
-                          images/readyornot-350.jpg 350w,
-                          images/readyornot-700.jpg 700w"
-                  sizes="(max-width: 320px) 320px,
-                         (-webkit-min-device-pixel-ratio: 1.25) 700px, 
-                         ( min--moz-device-pixel-ratio: 1.25) 700px,
-                         ( min-device-pixel-ratio: 1.25) 700px,
-                         ( min-resolution: 200dpi) 700px,
-                         ( min-resolution: 1.25dppx) 700px,
-                         350px"
-                >
-            </picture>
+            <div class="project-img" data-aos="fade-right">
+              <video autoplay loop muted playsinline>
+                <source src="videos/readyornot.mp4" type="video/mp4">
+                <picture>
+                  <!-- high density image -->
+                  <source media="(-webkit-min-device-pixel-ratio: 1.25), 
+                                 ( min--moz-device-pixel-ratio: 1.25),
+                                 ( min-device-pixel-ratio: 1.25),
+                                 ( min-resolution: 200dpi),
+                                 ( min-resolution: 1.25dppx)"
+                          srcset="images/readyornot-700.webp" type="image/webp">
+                  <!-- any display, 321 px wide or more -->
+                  <source media="(min-width: 321px)" srcset="images/readyornot-350.webp" type="image/webp">
+                  <!-- small mobile displays, 320px wide or less-->
+                  <source media="(max-width: 320px)" srcset="images/readyornot-320.webp" type="image/webp">
+                  <!-- fallback for IE and older browsers -->
+                  <img src="images/readyornot-320.jpg"
+                    alt="Screenshot showing a website user interface."
+                    width="5" height="4" 
+                    srcset="images/readyornot-320.jpg 320w,
+                            images/readyornot-350.jpg 350w,
+                            images/readyornot-700.jpg 700w"
+                    sizes="(max-width: 320px) 320px,
+                           (-webkit-min-device-pixel-ratio: 1.25) 700px, 
+                           ( min--moz-device-pixel-ratio: 1.25) 700px,
+                           ( min-device-pixel-ratio: 1.25) 700px,
+                           ( min-resolution: 200dpi) 700px,
+                           ( min-resolution: 1.25dppx) 700px,
+                           350px"
+                  >
+                </picture>
+              </video>
             </div>
-            <div class="project-summary">
+            <div class="project-summary"data-aos="fade-right">
               <h3>Ready or Not</h3>
-              <p>Ready or Not is a project that explores the commonality of our fears. Through color, motion, and typography, the site creates a calming atmosphere. This atmosphere encourages more honest interaction.</p>
-              <p>I developed this site to learn more about MySQL databases and experiment with color and motion. </p>
-              <p><span>Utilizes:</span> JavaScript, HTML5/CSS3, MySQL</p>
-              <a class="btn" href="http://readyornot.life/" rel="noreferrer noopener" target="_blank">View project</a>
+              <p>A project that explores the commonality of our fears. Through color, motion, and typography, the site creates a calming atmosphere. This atmosphere encourages more honest interaction.</p>
+              <p>I created this site to learn more about MySQL databases and to experiment with color and motion. </p>
+              <p><span>Toolkit:</span> JavaScript, HTML5/CSS3, MySQL</p>
+              <a class="btn" href="http://readyornot.life/" rel="noreferrer noopener" target="_blank">View Live</a>
             </div>
           </section>
+
         </div>
       </section>
 
@@ -216,7 +208,8 @@
       <section class="work-exp">
         <div class="content-wrap divider">
           <h2>Work Experience</h2>
-          <p>Learn more about my experience, education, and skills on <a href="https://www.linkedin.com/in/stevenwolpe/" rel="noreferrer noopener" target="_blank">LinkedIn</a>.</p>
+          <p>Currently doing a couple things. Let's have a chat and I'll tell  you all about it!</p>
+
           <section class="job-item">
             <div class="job-details">
               <h3>Front End Developer</h3>
@@ -224,6 +217,7 @@
             </div>
             <div class="job-summary">
               <p>Deliver front end development services for businesses and nonprofits. Implement HTML, CSS, and JavaScript.</p>
+              <p class="blue-text"><span class="semi-bold">Toolkit:</span> HTML5/CSS3, Sass, JavaScript, React, Vue, Firebase, Accessibility, GitHub, Adobe Creative Cloud</p>
               <ul>
                 <li>Design and develop UI/UX for user-facing features</li>
                 <li>Ensure cross-browser compatibility and optimize for speed</li>
@@ -231,45 +225,87 @@
                 <li>Collaborate with backend developers for server-side functionality</li>
                 <li>Present design and development concepts to clients and stakeholders</li>
                 <li>Communicate project goals and review performance benchmarks</li>
-                <li class="semi-bold">Utilizes: JavaScript, HTML5/CSS3, React, VueJS, GitHub, Sass, WordPress, Adobe Creative Cloud</li>
               </ul>
             </div>
           </section>
+
           <section class="job-item">
             <div class="job-details">
               <h3>Office Manager, <span>Project Manager</span></h3>
-              <p><i>Alco Plumbing</i>, <span><time datetime="2007-01">Jan 2007</time> - Present</span></p>
+              <p><i>Alco</i>, <span><time datetime="2007-01">Jan 2007</time> - Present</span></p>
             </div>
             <div class="job-summary">
-              <p>Provide plumbing contracting services for commercial and residential new construction, remodels, and additions.</p>
+              <p>Provide contracting services for commercial and residential new construction, remodels, and additions.</p>
               <ul>
                 <li>Generate project estimates and submit proposals</li>
                 <li>Review scopes of work and identify contract discrepancies</li>
-                <li>Coordinate project schedules with general contractors and subcontractors</li>
+                <li>Coordinate project schedules with contractors</li>
                 <li>Oversee project staging and execution</li>
               </ul>
             </div>
           </section>
+
         </div>
       </section>
 
-      <!-- education section -->
+      <!-- about section -->
 
-      <section class="education">
+      <section class="about">
         <div class="content-wrap">
-          <h2>Education</h2>
-          <section>
-            <h3>Santa Barbara City College  <span> &ndash; Santa Barbara, CA</span></h3>
-            <p><i>Associate in Arts w/ Honors, 4.0 <span>GPA</span></i></p> <p>Graphic Design & Photography</p>
-          </section>
+          <h2>About Me</h2>
+
+          <div class="container">
+            <div class="bio-info">
+              <p>When I'm not coding you can find me at the skatepark or sketching under a tree. I love reading weird books. I think communication is key!</p>
+              <h3>Education</h3>
+              <h4>Santa Barbara City College  <span> &ndash; Santa Barbara, CA</span></h4>
+              <p><i>Associate in Arts w/ Honors, 4.0 <span>GPA</span></i></p> <p>Graphic Design & Photography</p>
+            </div>
+            <picture>
+              <!-- high density image -->
+              <source media="(-webkit-min-device-pixel-ratio: 1.25), 
+                             ( min--moz-device-pixel-ratio: 1.25),
+                             ( min-device-pixel-ratio: 1.25),
+                             ( min-resolution: 200dpi),
+                             ( min-resolution: 1.25dppx)"
+                      srcset="images/about-me-300.webp" type="image/webp">
+              <!-- any display, 321 px wide or more -->
+              <source media="(min-width: 320px)" srcset="images/about-me-300.webp" type="image/webp">
+              <!-- fallback for IE and older browsers -->
+              <img src="images/about-me-300.jpg"
+                alt="Portrait photo of Steven Wolpe."
+                 
+                srcset="images/about-me-300.jpg 300w"
+                sizes="(min-width: 320px) 300px,
+                       (-webkit-min-device-pixel-ratio: 1.25) 300px, 
+                       ( min--moz-device-pixel-ratio: 1.25) 300px,
+                       ( min-device-pixel-ratio: 1.25) 300px,
+                       ( min-resolution: 200dpi) 300px,
+                       ( min-resolution: 1.25dppx) 300px,
+                       300px"
+                class="portrait"
+                >
+            </picture>
+          </div>
+          
         </div>
       </section>
+
+      <!-- window controls section -->
+
+      <div class="window-controls">
+        <div class="scroll-up-indicator">
+          <svg id="goToTop" class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 104.86 66.57" onclick="goToTop()">
+            <title>Go to top</title><g id="down-arrow" data-name="down-arrow"><path class="arrow-path" d="M101.93,2.93a10,10,0,0,1,0,14.14L66.57,52.43,52.43,66.57,38.29,52.43,2.93,17.07a10,10,0,0,1,0-14.14h0a10,10,0,0,1,14.14,0L52.43,38.29,87.79,2.93a10,10,0,0,1,14.14,0Z"/></g>
+          </svg>
+        </div>
+      </div>
 
       <!-- footer/contact section -->
 
       <footer>
         <div class="content-wrap">
-          <h2>Let's Keep in Touch!</h2>
+          <h2>Let's Connect!</h2>
           <div class="container">
             <ul>
               <li><h3>Email</h3> <a href="mailto:hello@stevenwolpe.com">hello@stevenwolpe.com</a></li>
@@ -315,26 +351,21 @@
                   <path fill="#E1EAFA" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                 </svg>
               </a>
-              <a href="https://www.dribbble.com/swolpe/" rel="noreferrer noopener" target="_blank">
-                Dribbble
-                <!-- dribbble logo -->
-                <svg version="1.1" class="" 
-                xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 48 48" >
-                  <path fill="#E1EAFA" d="M24,0C10.7,0,0,10.7,0,24c0,13.3,10.7,24,24,24s24-10.7,24-24C48,10.7,37.3,0,24,0z
-                      M44.1,22.4c-5.4-0.6-10-0.5-14,0.1c-0.3-0.9-1.1-2.8-1.6-3.6c4.7-1.9,8.5-5,10.8-7.9C42,14.1,43.8,18.1,44.1,22.4z M36.8,8.4
-                      c-2.4,3.6-7.3,6.2-9.9,7.2C24.4,11,21.5,6.9,19,4.4C25.1,2.3,32.2,4.2,36.8,8.4z M15.1,5.9C16.6,7.3,21.7,14,23,17
-                      c-3.3,1.3-11.7,3.2-18.5,2C5.9,13.3,9.9,8.5,15.1,5.9z M3.9,22.8C3.9,22.8,3.9,22.8,3.9,22.8c9.4,0.6,14.4-0.2,20.8-2.5
-                      c0.3,0.5,1.1,2.4,1.3,3c-7.2,2.1-13.4,7.4-17.2,14C5.7,33.8,3.7,29.2,3.9,22.8z M11.7,40c3.4-6.2,8.7-11.2,15.7-13.1
-                      c1.3,3.1,3.1,11.2,3.7,16C25.7,45.6,17,44.5,11.7,40z M34.8,41c-0.6-6.3-1.9-11-3.3-14.9c3.6-0.5,7.7-0.4,12.6,0.1
-                      C43.4,32.5,39.8,37.8,34.8,41z">
-                  </path>
-                </svg>
-              </a>
             </div>
           </div>
         </div>
       </footer>
 
     </main>
+    <script src="js/scripts.js"></script>
+
+    <!-- animate on scroll -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true
+      });
+    </script>
   </body>
 </html>
