@@ -154,6 +154,9 @@ header p:first-of-type {
 	margin-bottom: 1rem;
 }
 .header-img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 100%;
 	width: 100%;
 	max-width: 200px;
