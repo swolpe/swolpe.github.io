@@ -10,7 +10,9 @@ const headerImage = document.querySelector(".header-img img");
 // because we can use css transition on the background
 // which makes the image change look more animated
 const removeHeaderImg = () => {
-	headerImage.style.display = "none";
+	setTimeout(() => {
+		headerImage.style.display = "none";
+	}, 2000);
 };
 
 const toggleImage = () => {
