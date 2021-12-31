@@ -10,19 +10,19 @@ html {
 	box-sizing: inherit;
 }
 body {
-	color: #343434;
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-	font-family: "Rale", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+	padding: 0px;
+	margin: 0px;
+	color: rgb(52, 52, 52);
+	font-family: Rale, "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.6;
+	overflow-x: hidden;
 }
 a {
-	color: #343434;
-	text-decoration: none;
+	color: rgb(52, 52, 52);
 	font-weight: 600;
+	text-decoration: none;
 }
 @media (hover: hover) {
 	a:hover {
@@ -82,32 +82,31 @@ i {
 }
 .semi-bold {
 	color: rgba(52, 52, 52, 0.75);
-	/* color: #5551ff; */
 	font-weight: 800;
 }
 /* Button
 ----------------------------- */
 a.btn {
-	margin: 0 0.3em 0.3em 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	text-align: center;
 	display: inline-block;
-	padding: 8px 13px 8px;
-	background: #5551ff;
+	box-sizing: border-box;
+	padding: 8px 13px;
 	border: 3px solid transparent;
 	border-radius: 10px;
-	color: #fff;
+	margin: 0px 0.3em 0.3em 0px;
+	background: rgb(85, 81, 255);
+	color: rgb(255, 255, 255);
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 1;
-	transition: transform 0.2s ease 0s, background 0.2s ease 0s;
+	text-decoration: none;
+	text-align: center;
 	cursor: pointer;
+	transition: transform 0.2s ease 0s, background 0.2s ease 0s;
 }
 @media (hover: hover) {
 	a.btn:hover {
-		color: #f7fff7;
 		background-color: #e96269;
+		color: #f7fff7;
 	}
 }
 @media all and (max-width: 30em) {
@@ -122,9 +121,9 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
 	height: 100vh !important;
-	color: #696969;
+	width: 100%;
+	color: rgb(105, 105, 105);
 	font-size: 18px;
 	font-weight: 500;
 }
@@ -132,22 +131,21 @@ header h1 {
 	position: relative;
 	z-index: 600;
 	margin-bottom: 1rem;
-	color: #5551ff;
+	color: rgb(85, 81, 255);
 	font-size: 3rem;
 	line-height: 1;
 }
 header h1::after {
-	content: "";
 	position: absolute;
-	background-color: #5551ff;
-	-webkit-box-shadow: 0 0 8px #5551ff;
-	box-shadow: 0 0 8px #5551ff;
-	height: 25px;
-	left: 15px;
-	bottom: 0px;
-	width: 77%;
 	z-index: -1;
+	bottom: 0px;
+	left: 15px;
+	height: 25px;
+	width: 77%;
+	background-color: rgb(85, 81, 255);
 	opacity: 0.16;
+	content: "";
+	box-shadow: rgb(85, 81, 255) 0px 0px 8px;
 }
 header p {
 	margin: 0;
@@ -157,11 +155,11 @@ header p:first-of-type {
 }
 .header-img {
 	height: 100%;
-	max-width: 200px;
 	width: 100%;
-	margin: 0 auto;
-	background: url(../images/steven-wolpe.svg) center no-repeat;
-	transition: background 0.2s ease-in;
+	max-width: 200px;
+	margin: 0px auto;
+	background: url("../images/steven-wolpe.svg") center center no-repeat;
+	transition: background 0.2s ease-in 0s;
 }
 .header-img.active {
 	background: url(../images/steven-wolpe-surprise.svg) center no-repeat;
@@ -204,9 +202,9 @@ header .header-container {
 .scroll-down-indicator {
 	position: absolute;
 	top: 90vh;
+	color: #e96269;
 	font-family: "Nanum Pen Script", "cursive";
 	font-size: 23px;
-	color: #e96269;
 	-webkit-animation-duration: 0.8s;
 	animation-duration: 0.8s;
 	-webkit-animation-iteration-count: infinite;
@@ -237,17 +235,17 @@ header .header-container {
 	color: #5551ff;
 }
 .projects h2::after {
-	content: "";
 	position: absolute;
-	background-color: #5551ff;
-	-webkit-box-shadow: 0 0 8px #5551ff;
-	box-shadow: 0 0 8px #5551ff;
-	height: 20px;
-	left: 10px;
-	bottom: 0px;
-	width: 35%;
 	z-index: -1;
+	bottom: 0px;
+	left: 10px;
+	height: 20px;
+	width: 35%;
+	background-color: rgb(85, 81, 255);
 	opacity: 0.1;
+	content: "";
+	box-shadow: rgb(85, 81, 255) 0px 0px 8px;
+	-webkit-box-shadow: rgb(85, 81, 255) 0px 0px 8px;
 }
 .projects p:first-of-type {
 	margin-bottom: 0;
@@ -263,8 +261,8 @@ header .header-container {
 .project-item video {
 	display: block;
 	margin: 0 auto;
-	max-width: 600px;
 	width: 100%;
+	max-width: 600px;
 	height: auto;
 	border-radius: 0.25rem;
 }
@@ -272,12 +270,12 @@ header .header-container {
 	margin-top: 0;
 }
 .project-item p:last-of-type {
-	font-weight: 600;
 	color: #5551ff;
+	font-weight: 600;
 }
 .project-item p:last-of-type span {
-	font-weight: 800;
 	color: rgba(52, 52, 52, 0.85);
+	font-weight: 800;
 }
 /* Work Experience
 ----------------------------- */
@@ -286,17 +284,17 @@ header .header-container {
 	color: #5551ff;
 }
 .work-exp h2::after {
-	content: "";
 	position: absolute;
-	background-color: #5551ff;
-	-webkit-box-shadow: 0 0 8px #5551ff;
-	box-shadow: 0 0 8px #5551ff;
-	height: 20px;
-	left: 10px;
-	bottom: 0px;
-	width: 35%;
 	z-index: -1;
+	bottom: 0px;
+	left: 10px;
+	height: 20px;
+	width: 35%;
+	background-color: rgb(85, 81, 255);
 	opacity: 0.1;
+	content: "";
+	box-shadow: rgb(85, 81, 255) 0px 0px 8px;
+	-webkit-box-shadow: rgb(85, 81, 255) 0px 0px 8px;
 }
 .job-item {
 	display: grid;
@@ -313,8 +311,8 @@ header .header-container {
 	margin-top: 0;
 }
 .job-summary ul {
-	padding-left: 2rem;
 	margin-bottom: 0;
+	padding-left: 2rem;
 	line-height: 2;
 }
 /* Education
@@ -336,22 +334,22 @@ header .header-container {
 	color: #5551ff;
 }
 .about h2::after {
-	content: "";
 	position: absolute;
-	background-color: #5551ff;
-	-webkit-box-shadow: 0 0 8px #5551ff;
-	box-shadow: 0 0 8px #5551ff;
-	height: 20px;
-	left: 10px;
-	bottom: 0px;
-	width: 30%;
 	z-index: -1;
+	bottom: 0px;
+	left: 10px;
+	height: 20px;
+	width: 30%;
+	background-color: rgb(85, 81, 255);
 	opacity: 0.1;
+	content: "";
+	box-shadow: rgb(85, 81, 255) 0px 0px 8px;
+	-webkit-box-shadow: rgb(85, 81, 255) 0px 0px 8px;
 }
 .about h4 {
-	line-height: 1.6;
 	margin-top: 0.75rem;
 	margin-bottom: 0.25rem;
+	line-height: 1.6;
 }
 .about h4 span {
 	white-space: nowrap;
@@ -389,8 +387,8 @@ footer .container {
 	align-items: center;
 }
 footer ul {
-	list-style: none;
 	padding-left: 0;
+	list-style: none;
 }
 footer li {
 	margin-bottom: 0.5rem;
@@ -411,11 +409,10 @@ footer a {
 }
 footer .links a {
 	display: inline-block;
-	line-height: 0;
 	margin-right: 1rem;
+	color: transparent;
 	line-height: 0;
 	font-size: 0;
-	color: transparent;
 }
 footer .links a:last-of-type {
 	margin-right: 0;
@@ -439,18 +436,19 @@ footer .links svg {
 }
 .window-controls .scroll-up-indicator {
 	position: fixed;
-	right: 1rem;
 	bottom: -25%;
-	margin: 0 0.25rem;
+	right: 1rem;
 	float: right;
-	transition: all 0.5s cubic-bezier(0.7, -0.2, 0.265, 1.2);
+	margin: 0px 0.25rem;
 	cursor: pointer;
+	transition: all 0.5s cubic-bezier(0.7, -0.2, 0.265, 1.2) 0s;
 }
-#goToTop {
+.window-controls .scroll-up-indicator svg {
 	box-sizing: content-box;
 	padding: 1.5rem;
 	border-radius: 10px;
 	transform: rotate(180deg);
+	transition: background 0.2s ease-in;
 }
 @media (hover: hover) {
 	#goToTop:hover {
@@ -512,13 +510,13 @@ footer .links svg {
 		order: 2;
 	}
 	header .header-img {
-		order: 1;
 		height: 160px;
+		order: 1;
 	}
 	header .header-img img {
 		display: block;
-		margin: 0 auto;
 		width: 33%;
+		margin: 0 auto;
 	}
 	header h1 {
 		font-size: 2.5rem;
@@ -560,10 +558,10 @@ footer .links svg {
 		grid-template-columns: 1fr;
 	}
 	footer .links {
-		margin-top: 2rem;
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
+		margin-top: 2rem;
 	}
 	footer .links svg {
 		margin-right: 0;
@@ -583,8 +581,8 @@ footer .links svg {
 		font-size: 1.9rem;
 	}
 	header h1::after {
-		height: 16px;
 		left: 10px;
+		height: 16px;
 		width: 75%;
 	}
 	.projects h2::after,
@@ -611,8 +609,8 @@ footer .links svg {
 }
 @media screen and (max-width: 400px) {
 	header h1::after {
-		height: 16px;
 		left: 10px;
+		height: 16px;
 		width: 95%;
 	}
 	.projects h2::after,
