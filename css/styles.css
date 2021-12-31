@@ -162,7 +162,7 @@ header p:first-of-type {
 	transition: background 0.2s ease-in 0s;
 }
 .header-img.active {
-	background: url(../images/steven-wolpe-surprise.svg) center no-repeat;
+	background: url("../images/steven-wolpe-surprise.svg") center no-repeat;
 }
 header .header-container {
 	display: grid;
