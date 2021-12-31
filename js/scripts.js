@@ -1,10 +1,20 @@
 /* Change header image
 ----------------------------- */
 const header = document.querySelector("header");
-const headerImage = document.querySelector(".header-img");
+const headerImageContainer = document.querySelector(".header-img");
+const headerImage = document.querySelector(".header-img img");
+
+// remove header img after page load
+// this image is only used for link previews (when sharing link on social media)
+// the image container uses a background url
+// because we can use css transition on the background
+// which makes the image change look more animated
+const removeHeaderImg = () => {
+	headerImage.style.display = "none";
+};
 
 const toggleImage = () => {
-	headerImage.classList.toggle("active");
+	headerImageContainer.classList.toggle("active");
 };
 
 header.addEventListener("touchstart", toggleImage, false);
