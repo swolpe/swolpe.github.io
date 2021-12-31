@@ -21,7 +21,6 @@ const goToProjects = () => {
 
 /* Display go to top button
 ----------------------------- */
-// const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 const goToTopBtn = document.querySelector(".scroll-up-indicator");
 
