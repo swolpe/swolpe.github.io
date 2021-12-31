@@ -1,10 +1,14 @@
 /* Change header image
 ----------------------------- */
+const header = document.querySelector("header");
 const headerImage = document.querySelector(".header-img");
 
 const toggleImage = () => {
 	headerImage.classList.toggle("active");
 };
+
+header.addEventListener("touchstart", toggleImage, false);
+header.addEventListener("touchend", toggleImage, false);
 
 /* Go to projects on click
 ----------------------------- */
@@ -17,7 +21,7 @@ const goToProjects = () => {
 
 /* Display go to top button
 ----------------------------- */
-const header = document.querySelector("header");
+// const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 const goToTopBtn = document.querySelector(".scroll-up-indicator");
 
