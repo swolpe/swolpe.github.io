@@ -2,18 +2,6 @@
 ----------------------------- */
 const header = document.querySelector("header");
 const headerImageContainer = document.querySelector(".header-img");
-const headerImage = document.querySelector(".header-img img");
-
-// remove header img after page load
-// this image is only used for link previews (when sharing link on social media)
-// the image container uses a background url
-// because we can use css transition on the background
-// which makes the image change look more animated
-const removeHeaderImg = () => {
-	setTimeout(() => {
-		headerImage.style.display = "none";
-	}, 2000);
-};
 
 const toggleImage = () => {
 	headerImageContainer.classList.toggle("active");
